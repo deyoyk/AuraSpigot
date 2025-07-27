@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.deyo.spigot</groupId>
+    <artifactId>AuraSpigot</artifactId>
+    <version>1.8.8-R0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+        <name>AuraSpigot</name>
+    <description>Custom Spigot fork with optimizations and features</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <log4j.version>2.19.0</log4j.version>
+        <jline.version>3.21.0</jline.version>
+        <byteBuddy.version>1.12.12</byteBuddy.version>
+        <okaeriConfigs.version>5.0.0-beta.6</okaeriConfigs.version>
+        <minecraft.version>1_8_R3</minecraft.version>
+    </properties>
+
+    <modules>
+        <module>AuraSpigot-API</module>
+        <module>AuraSpigot-Server</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>mavenCentral</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+            <id>minecraft-libraries</id>
+            <url>https://libraries.minecraft.net</url>
+        </repository>
+        <repository>
+            <id>titanvale-releases</id>
+            <url>https://repo.titanvale.net/releases</url>
+        </repository>
+        <repository>
+            <id>titanvale-snapshots</id>
+            <url>https://repo.titanvale.net/snapshots</url>
+        </repository>
+        <repository>
+            <id>okaeri-repo</id>
+            <url>https://storehouse.okaeri.eu/repository/maven-public</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
